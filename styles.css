@@ -1,0 +1,503 @@
+:root {
+    --fondo: #2E381F;
+    --secundario: #4A6743;
+    --Subtitulos: #99896E;
+    --Titulos: #ECDBC4;
+    --Titulos2: #9AB686;
+}
+
+/* Formatear el diseño de la pagina  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Encabezado */
+header {
+    position: relative;
+    height: 100vh;
+    z-index: 1;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/portada.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.encabezadoSuperior,
+.titulos {
+    position: relative;
+    z-index: 2;
+}
+
+.encabezadoSuperior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 150px;
+    padding-right: 80px;
+
+}
+
+/* Navegacion  */
+.navegacion a {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px black;
+    padding-right: 50px;
+    transition: 0.3s ease-in;
+    display: inline-block;
+}
+
+.navegacion a:hover {
+    transform: scale(1.1);
+}
+
+/* Alinear navegacion  */
+.navegacion {
+    text-align: end;
+}
+
+/* Fuente  */
+.titulos {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+.titulos h2 {
+    margin-top: 120px;
+    font-weight: lighter;
+}
+
+/* Logo */
+.logo img {
+    width: 160px;
+    height: auto;
+}
+
+/* HABITACIONES */
+
+.habitaciones {
+    background-color: var(--fondo);
+    text-align: center;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.habitaciones h1 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 40px;
+    color: var(--Titulos);
+}
+
+.habitacion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    column-gap: 40px;
+    row-gap: 50px;
+}
+
+/* Habitaciones primera fila */
+.Habitacion1 {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.Habitacion2 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.Habitacion3 {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.Habitacion3 {
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+}
+
+/* Habitaciones segunda fila */
+.Habitacion5 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+.Habitacion6 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.Habitacion7 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.contenedorHabitacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgba(74, 103, 67, 0.3);
+    border-radius: 20px;
+    transition: 0.3s ease-in;
+}
+
+.contenedorHabitacion:hover {
+    transform: scale(1.02);
+}
+
+.contenedorHabitacion h2 {
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--Titulos2);
+}
+
+
+.contenedorHabitacion img {
+    width: 80%;
+    height: 30%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.contenedorHabitacion p {
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+
+}
+
+.contenedorHabitacion h1 {
+    color: var(--Subtitulos);
+}
+
+.contenedorInfoHabitacion {
+    margin-bottom: 15px;
+    display: flex;
+    padding-left: 50px;
+    align-items: center;
+}
+
+.botonReservas,
+.botonComida {
+    height: 50px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: var(--Titulos2);
+    margin: 20px auto 0;
+    transition: 0.3s ease-in;
+    margin-bottom: 20px;
+}
+
+.botonReservas:hover,
+.botonComida:hover {
+    border: 2px solid white;
+    color: white;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+
+footer {
+    background-color: var(--secundario);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 80px;
+}
+
+/* PASADIA */
+.tarifas {
+    background-color: var(--fondo);
+    text-align: center;
+    align-items: center;
+}
+
+.tarifas h1 {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+}
+
+.introduccionTarifas p {
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.contenedorPasadia {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    text-align: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.niños,
+.adultos {
+    background-color: rgba(74, 103, 67, 0.3);
+    border-radius: 20px;
+}
+
+.contenedorPasadia h2 {
+    color: var(--Titulos);
+    font-size: 35px;
+    padding-top: 20px;
+}
+
+.contenedorPasadia p {
+    color: white;
+    text-align: left;
+    padding-right: 20px;
+    font-size: 30px;
+}
+
+.contenedorPasadia img {
+    height: 300px;
+    width: auto;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: block;
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.adultos {
+    columns: 1/2;
+}
+
+.niños {
+    columns: 2/3;
+}
+
+.nosequeponer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lineaseparacion {
+    grid-column: 1/-1;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-top: 20px;
+}
+
+/* PLATOS */
+
+/* A LA CARTA */
+
+.contenedorMenuCarta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 40px;
+    margin: 0 auto;
+}
+
+.contenedorMenuCarta h1 {
+    padding-bottom: 20px;
+}
+
+.platos {
+    background-color: rgba(74, 103, 67, 0.3);
+    border-radius: 20px;
+    transition: 0.3s ease-in;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.platos:hover {
+    transform: scale(1.02);
+}
+
+.platos p {
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.platos img {
+
+    width: 80%;
+    height: 200px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: block;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.contactenos{
+    background-color: var(--secundario);
+}
+
+.contactenos h1{
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.contactenos img{
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.contenedorRedes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
+.red h2{
+    color: white;
+    padding-left: 3dvb;
+    padding-bottom: 30px;
+    font-weight: lighter;
+}
+
+
+.red img{
+    width: 150px;
+    height: 150px;
+    transition: 0.3s ease;
+    margin-bottom: 50px;
+}
+
+.red img:hover{
+    transform: scale(1.1);
+}
+
+.videoYT iframe{
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+/* Para pantallas moviles */
+@media (max-width: 768px) {
+    .habitacion {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        row-gap: 50px;
+        column-gap: 10px;
+    }
+
+    .Habitacion1,
+    .Habitacion2,
+    .Habitacion3,
+    .Habitacion5,
+    .Habitacion6,
+    .Habitacion7 {
+        grid-column: auto;
+        grid-row: auto;
+    }
+
+    .encabezadoSuperior {
+        justify-content: center;
+        column-gap: 80px;
+    }
+
+    header {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        height: 100vh;
+
+    }
+
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* PASADIA */
+    .contenedorPasadia {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        gap: 50px;
+        text-align: center;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .adultos {
+        grid-row: 1/2;
+    }
+
+    .niños {
+        grid-row: 2/3;
+    }
+
+    .contenedorMenuCarta {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 40px;
+        margin: 0 auto;
+    }
+
+    .contenedorRedes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        row-gap: 40px;
+    }
+}
